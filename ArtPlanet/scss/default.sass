@@ -1,0 +1,112 @@
+@import "compass/css3"
+* 
+	margin: 0
+	padding: 0
+	font: 
+		family: Yu Mincho , Microsoft JhengHei, arial
+		size: 16px
+
+a
+	text-decoration: none
+	color: #000
+	&:hover , &:focus
+		outline: none
+		text-decoration: none
+
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+@for $i from 1 through 5
+	.color#{$i}
+		color: hsl(-40 + 60*$i, 100, 50)
+	.bg-color#{$i}
+		background-color: hsl(-40 + 60*$i, 100, 50)
+		color: #FFF
+
+body
+	overflow-x: hidden
+
+header
+	position: fixed
+	z-index: 10
+	background: #000
+	width: 100%
+	height: 45px
+	padding: 15px 20px 12px
+	a
+		color: #CCC
+
+	#index
+		float: left
+		position: relative
+		a
+			position: absolute
+			width: 80px
+			animation: indexOpacity 6s infinite
+			&:last-child
+				opacity: 0
+				animation: indexOpacity2 6s infinite
+	nav
+		position: absolute
+		left: 50%
+		transform: translate(-50%)
+		li
+			list-style-type: none
+			display: inline-block
+			margin: 0 10px
+			font-weight: bold
+			a
+				+transition(0.5s)
+		@for $i from 1 through 5
+			li:nth-child(#{$i}) a:hover
+				color: hsl(-40 + 60*$i, 100, 70)
+				+transition(0.5s)
+	.search
+		float: right
+		a
+			margin: 0 10px
+			color: #CCC
+
++keyframes(indexOpacity)
+	15%
+		opacity: 1
+	35%
+		opacity: 0
+	65%
+		opacity: 0
+	85%
+		opacity: 1
++keyframes(indexOpacity2)
+	15%
+		opacity: 0
+	35%
+		opacity: 1
+	65%
+		opacity: 1
+	85%
+		opacity: 0
+
+#container
+	padding-top: 45px
+
+
+footer
+	background: #000
+	padding: 20px
+	text-align: center
+	li
+		list-style-type: none
+		display: inline-block
+		a
+			margin: 3px 5px
+			color: #CCC
+			+transition(1s)
+			&:hover
+				color: #C00
+				+transition(1s)
+		img
+			margin: 0 20px
+			height: 40px
