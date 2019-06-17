@@ -1,0 +1,31 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <linearGradient spreadMethod="pad" y2="0" x2="1" y1="0" x1="0" id="svg_9">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#000fef"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#0fafaa"/>
+  </linearGradient>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_14_blur">
+   <feGaussianBlur stdDeviation="1" in="SourceGraphic"/>
+  </filter>
+  <linearGradient spreadMethod="pad" y2="0" x2="0" y1="0.96875" x1="0" id="svg_18">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#000fef"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#0fafaa"/>
+  </linearGradient>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_16_blur">
+   <feGaussianBlur stdDeviation="1" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect filter="url(#svg_14_blur)" stroke="#000" id="svg_14" height="2" width="478" y="50" x="50" stroke-width="0" fill="url(#svg_9)"/>
+  <rect filter="url(#svg_16_blur)" id="svg_16" height="295" width="2" y="50" x="526.5" stroke-opacity="null" stroke-width="0" stroke="#000" fill="url(#svg_18)"/>
+ </g>
+</svg>

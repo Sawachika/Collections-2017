@@ -1,0 +1,52 @@
+body {
+  min-height: 100vh;
+  padding-top: 3.5rem;
+}
+
+.navbar {
+  background-color: #f8f8f8;
+}
+
+.dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  padding: 20px 0;
+}
+.sidebar .nav-item {
+  width: 100%;
+}
+.sidebar .nav-item .nav-link {
+  border-radius: 0;
+}
+
+small {
+  display: block;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 1s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  margin-top: -19px;
+}
+
+.collapse-enter-active, .collapse-leave-active {
+  transition: height, padding 1s;
+}
+
+.collapse-enter, .collapse-leave-to {
+  overflow: hidden;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}

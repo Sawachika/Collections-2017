@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; font-family: Microsoft JhengHei, arial; }
+a{ text-decoration: none; color: inherit; }
+.clearfix:after {  
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+body{
+	display: none;
+	overflow: hidden;
+	background: #000;
+	min-height: 100vh;
+}
+#main{
+	position: relative;
+	background: linear-gradient(#d1b8ff,#7ce9ef);
+	margin: 0 auto;
+	width: 800px; height: 600px;
+	font-size: 0;
+}
+#main > div{
+	opacity: 0;
+	position: absolute;
+}
+
+
+/*1111111111111111111*/
+#river{
+	bottom: -10%;
+	background:url(../img/river/river.png) no-repeat;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 100%; height: 50%;
+}
+#river.on , #sky.on{
+	opacity: 1;
+	bottom: 0;
+	height: 100%;
+	transition: bottom 7s , height 5s , opacity 1s;
+}
+
+#sky{
+	top: 0;
+	background:url(../img/river/sky.png) no-repeat fixed;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 100%; height: 0;
+}
+
+#sky.on{
+	opacity: 1;
+	height: 100%;
+	transition: height 5s , opacity 1s;
+}
+
+
+/*222222222222222222222222222*/
+#left{
+	bottom: -1500px;
+	background:url(../img/river/left.png) no-repeat;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 0; height: 100%;
+}
+#left.on {
+	opacity: 1;
+	bottom: 0;
+	width: 100%;
+	transition: bottom 5s 1s, width 5s 1s, opacity 3s 3s;
+}
+#L2{
+	bottom: -1500px;
+	background:url(../img/river/L2.png) no-repeat;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 0; height: 100%;
+	transform: scale(3);
+}
+#L2.on{
+	opacity: 1;
+	bottom: 0;
+	width: 100%;
+	transform: scale(1);
+	transition: bottom 5s 2s, width 5s 2s, opacity 3s 5s , transform 3s 5s;
+}
+
+
+#right{
+	bottom: -1500px; right: 0;
+	background:url(../img/river/right.png) no-repeat;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 0; height: 100%;
+}
+#right.on{
+	opacity: 1;
+	bottom: 0;
+	width: 100%;
+	transition: bottom 8s, width 8s, opacity 3s 4s;
+}
+#right2{
+	top: -1500px; right: 0;
+	background:url(../img/river/right.png) no-repeat;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 0; height: 100%;
+}
+#right2.on{
+	opacity: 1;
+	top: 0;
+	width: 100%;
+	transition: top 8s, width 8s, opacity 3s 4s;
+}
+
+/*33333333333333333*/
+#center{
+	top: -1500px; right: 0;
+	background:url(../img/river/center.png) no-repeat;
+	/*background-size: 100%;*/
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	width: 0; height: 100%;
+}
+#center.on{
+	opacity: 1;
+	top: 0;
+	width: 100%;
+
+	transform: rotate(360deg);
+	transition: top 8s 2s, width 8s 2s, opacity 3s 5s , transform 3s 6s;
+}
+
+
+
+#line{
+	opacity: 0;
+	position: absolute;
+	top: 50px; left: 40%;
+	width: 0px; height: 82px;
+}
+#line.on{
+	opacity: 1;
+	width: 156px;
+	transition: opacity 2s 6s , width 2s 7s;
+}
